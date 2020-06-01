@@ -1,0 +1,71 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// int mis(vector<int>v1 , int n){   //it can be used but giving error for large numbers
+    
+//      if(v1[0] != 1){
+//          return 1;
+//      }
+    
+    
+//     for(int i=0; i<n-1; i++){
+//         int tmp = v1[i];
+//         int temp1 = v1[i+1];
+        
+//         if((tmp+1)==temp1){
+//             continue;
+//         }
+//         else{
+//             return (tmp+1);
+//         }
+            
+//     }
+// }
+
+
+int main() {
+	
+	int t;
+	
+	cin>>t;
+	
+	
+	
+	while(t>0){
+	    
+	    int n;
+      
+	    cin>>n;
+	    
+      int arr[n-1];
+	   
+     // vector<int> v1;
+	   
+     int sum = 0;
+	    
+	    for(int i=0; i<n-1; i++){
+	   
+         // int j;
+	       // cin>>j;
+	       
+         cin>>arr[i];
+	       
+         sum += arr[i];
+	        
+	       // v1.push_back(j);    
+	    
+      }
+	    
+	   
+     // sort(v1.begin() , v1.end());
+     // cout<<mis(v1 , n-1)<<endl;
+	   
+	   int num = (n*(n+1))/2;  //sum of n natural numbers
+	   
+	   int x = num - sum;
+	   
+	   cout<<x<<endl;
+	    t--;
+	}
+	return 0;
+}
